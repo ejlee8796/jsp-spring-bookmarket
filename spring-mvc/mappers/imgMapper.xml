@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.mapper.imgMapper">
+	<select id="selectSliding2Board" resultType="BoardVO">
+		<![CDATA[
+			select * from spring1board2 where bname = 'admin' and btitle like '[북마켓]%'
+		]]>
+	</select>
+	<select id="selectSliding1Board" resultType="BoardVO">
+		select * from spring1board2 order by bhit desc limit 3
+	</select>
+	<select id="selectTab2Board" resultType="BoardVO">
+		select * from spring1board2 order by bno desc limit 3
+	</select>
+	<select id="selectSliding1Basic" resultType="BoardVO">
+		<![CDATA[
+			select * from spring1board2 where bname = 'admin' and btitle like '[EVENT]%'
+		]]>
+	</select>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.mapper.CommentMapper">
+	<insert id="insertComment">
+		insert into spring1comment2 (bno, comment, writer, pass, secret) values ( #{bno}, #{comment}, #{writer}, #{pass}, #{secret} )
+	</insert>
+	<select id="checkCommentPass" resultType="CommentVO">
+		select pass from spring1comment2 where cno = #{cno}
+	</select>
+	<select id="selectAllComment" resultType="CommentVO">
+		select * from spring1comment2 where bno = #{bno} order by cno asc
+	</select>
+	<update id="updateComment">
+		update spring1comment2 set comment = #{comment} where cno = #{cno}
+	</update>
+	<delete id="deleteComment">
+		delete from spring1comment2 where cno = #{cno}
+	</delete>
+</mapper>

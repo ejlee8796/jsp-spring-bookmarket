@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.company.mapper.pagingMapper">
+	<insert id="insertBoard"> 
+		insert into spring1board2 (bname, bpass, btitle, bcontent, bfile) values ( #{bname}, #{bpass}, #{btitle}, #{bcontent}, #{bfile} )
+	</insert> <!-- 글 작성 -->
+	<select id="selectAllBoard" resultType="BoardVO">
+		select * from spring1board2 order by bno desc
+	</select> <!-- 전체 리스트 출력 -->
+	<select id="detailBoard" resultType="BoardVO">
+		select * from spring1board2 where bno = #{bno}
+	</select> <!-- 버튼 눌러서 디테일 페이지 이동 --><!-- 수정 버튼 불러서 수정 페이지 이동 -->
+	<update id="updateHit">
+		update spring1board2 set bhit = bhit+1 where bno = #{bno}
+	</update> <!-- 버튼 눌러서 디테일 페이지 클릭시 조회수 업데이트 -->
+	<select id="checkboardPass" resultType="BoardVO">
+		select bpass from spring1board2 where bno = #{bno}
+	</select> <!-- 비밀번호 확인 -->
+	<update id="updateBoard" >
+		update spring1board2 set btitle = #{btitle}, bcontent = #{bcontent}, bfile = #{bfile} where bno=#{bno}
+	</update> <!-- 비밀번호 확인 후 업데이트 -->
+	<delete id="deleteBoard">
+		delete from spring1board2 where bno = #{bno}
+	</delete> <!-- 비밀번호 확인 후 삭제 -->
+	<select id="select10List" resultType="BoardVO">
+		select * from spring1board2 order by bno desc limit #{pstartno}, 12
+	</select>
+		<select id="selectCount" resultType="int">
+		select count(*) as cnt from spring1board2
+	</select>
+	<select id="searchBoard" resultType="BoardVO">
+		<![CDATA[
+			select * from spring1board2 where btitle like concat('%', #{btitle}, '%') order by bno desc limit #{bno}, 10
+		]]>
+	</select>
+		<select id="searchCount" resultType="int">
+		<![CDATA[
+			select count(*) from spring1board2 where btitle like concat('%', #{btitle}, '%')
+		]]>
+	</select>
+</mapper>
+
+
+<!-- 
+
+
+create table mvc_sboard2_i(
+bno int not null auto_increment primary key,
+bname varchar(50) not null,
+bpass varchar(50) not null,
+btitle varchar(100) not null,
+bcontent text not null,
+bdate timestamp not null,
+bhit int not null default 0,
+bgroup int default 0,
+bstep int default 0,
+bindent int default 0,
+bfile varchar(200)
+) default charset =utf8;
+
+
+
+
+ -->
