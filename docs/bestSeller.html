@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/default.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <title>BookMarket - 베스트셀러</title>
   <style>
     body { background: #f5f5f5; font-family: 'Lato', sans-serif; }
@@ -18,8 +20,8 @@
     input#search { padding: 5px; width: 60%; border: 1px solid #ccc; border-radius: 6px; }
     .best-wrap { padding: 40px 0; }
     .rank-badge { display: inline-block; background: #e74c3c; color: white; border-radius: 50%; width: 28px; height: 28px; line-height: 28px; text-align: center; font-weight: bold; font-size: 0.85em; }
-    .book-cover { background: #ddd; height: 160px; line-height: 160px; text-align: center; color: #aaa; margin-bottom: 10px; }
-    .book-cover-sm { background: #ddd; height: 110px; line-height: 110px; text-align: center; color: #aaa; margin-bottom: 8px; font-size: 0.8em; }
+    .bk-cover-lg { width: 130px; height: 180px; object-fit: cover; margin: 10px auto; display: block; border: 1px solid #eee; }
+    .bk-cover-sm { width: 70px; height: 100px; object-fit: cover; margin: 6px auto; display: block; border: 1px solid #eee; }
     .note { color: #888; font-size: 0.85em; text-align: right; margin-bottom: 15px; }
   </style>
 </head>
@@ -64,26 +66,28 @@
     </ul>
     <p class="note" style="margin-top:10px;">※ 알라딘 RSS API 연동 실시간 데이터</p>
     <div class="row">
+      <!-- 1위 -->
       <div class="col-sm-3 text-center">
         <span class="rank-badge">1</span>
-        <div class="book-cover">표지</div>
+        <img class="bk-cover-lg" src="https://raw.githubusercontent.com/ejlee8796/jsp-spring-bookmarket/main/images/1.jpg" alt="1위">
         <h4><strong>베스트셀러 도서 A</strong></h4>
         <p style="color:#888;">저자명 | 출판사</p>
         <p><strong>15,000원</strong></p>
       </div>
+      <!-- 2~10위 -->
       <div class="col-sm-9">
         <div class="row">
-          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#3498db;">2</span><div class="book-cover-sm">표지</div><p style="font-size:0.8em;">도서명 B</p><p style="font-size:0.8em;color:#888;">12,000원</p></div>
-          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#3498db;">3</span><div class="book-cover-sm">표지</div><p style="font-size:0.8em;">도서명 C</p><p style="font-size:0.8em;color:#888;">13,500원</p></div>
-          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#95a5a6;">4</span><div class="book-cover-sm">표지</div><p style="font-size:0.8em;">도서명 D</p><p style="font-size:0.8em;color:#888;">11,000원</p></div>
-          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#95a5a6;">5</span><div class="book-cover-sm">표지</div><p style="font-size:0.8em;">도서명 E</p><p style="font-size:0.8em;color:#888;">14,000원</p></div>
-          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#95a5a6;">6</span><div class="book-cover-sm">표지</div><p style="font-size:0.8em;">도서명 F</p><p style="font-size:0.8em;color:#888;">9,800원</p></div>
+          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#3498db;">2</span><img class="bk-cover-sm" src="https://raw.githubusercontent.com/ejlee8796/jsp-spring-bookmarket/main/images/2.jpg"><p style="font-size:0.8em;">도서명 B</p><p style="font-size:0.8em;color:#888;">12,000원</p></div>
+          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#3498db;">3</span><img class="bk-cover-sm" src="https://raw.githubusercontent.com/ejlee8796/jsp-spring-bookmarket/main/images/3.jpg"><p style="font-size:0.8em;">도서명 C</p><p style="font-size:0.8em;color:#888;">13,500원</p></div>
+          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#95a5a6;">4</span><img class="bk-cover-sm" src="https://raw.githubusercontent.com/ejlee8796/jsp-spring-bookmarket/main/images/4.jpg"><p style="font-size:0.8em;">도서명 D</p><p style="font-size:0.8em;color:#888;">11,000원</p></div>
+          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#95a5a6;">5</span><img class="bk-cover-sm" src="https://raw.githubusercontent.com/ejlee8796/jsp-spring-bookmarket/main/images/5.jpg"><p style="font-size:0.8em;">도서명 E</p><p style="font-size:0.8em;color:#888;">14,000원</p></div>
+          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#95a5a6;">6</span><img class="bk-cover-sm" src="https://raw.githubusercontent.com/ejlee8796/jsp-spring-bookmarket/main/images/6.jpg"><p style="font-size:0.8em;">도서명 F</p><p style="font-size:0.8em;color:#888;">9,800원</p></div>
         </div>
         <div class="row" style="margin-top:10px;">
-          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#95a5a6;">7</span><div class="book-cover-sm">표지</div><p style="font-size:0.8em;">도서명 G</p></div>
-          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#95a5a6;">8</span><div class="book-cover-sm">표지</div><p style="font-size:0.8em;">도서명 H</p></div>
-          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#95a5a6;">9</span><div class="book-cover-sm">표지</div><p style="font-size:0.8em;">도서명 I</p></div>
-          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#95a5a6;">10</span><div class="book-cover-sm">표지</div><p style="font-size:0.8em;">도서명 J</p></div>
+          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#95a5a6;">7</span><img class="bk-cover-sm" src="https://raw.githubusercontent.com/ejlee8796/jsp-spring-bookmarket/main/images/7.jpg"><p style="font-size:0.8em;">도서명 G</p></div>
+          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#95a5a6;">8</span><img class="bk-cover-sm" src="https://raw.githubusercontent.com/ejlee8796/jsp-spring-bookmarket/main/images/8.jpg"><p style="font-size:0.8em;">도서명 H</p></div>
+          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#95a5a6;">9</span><img class="bk-cover-sm" src="https://raw.githubusercontent.com/ejlee8796/jsp-spring-bookmarket/main/images/9.jpg"><p style="font-size:0.8em;">도서명 I</p></div>
+          <div class="col-sm-2 text-center"><span class="rank-badge" style="background:#95a5a6;">10</span><img class="bk-cover-sm" src="https://raw.githubusercontent.com/ejlee8796/jsp-spring-bookmarket/main/images/10.jpg"><p style="font-size:0.8em;">도서명 J</p></div>
         </div>
       </div>
     </div>
