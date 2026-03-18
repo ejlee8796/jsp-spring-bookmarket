@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>BookMarket - 마이페이지</title>
+  <style>
+    .navbar { background:#2c3e50; border:none; border-radius:0; }
+    .navbar-brand, .navbar .nav > li > a { color:#fff !important; }
+    body { background:#f5f5f5; }
+    .mypage-wrap { max-width:600px; margin:50px auto; background:white; border-radius:8px; padding:40px; box-shadow:0 2px 10px rgba(0,0,0,0.08); }
+    .mypage-wrap h3 { font-weight:bold; margin-bottom:30px; }
+    .section-btn { margin-top:30px; padding-top:20px; border-top:1px solid #eee; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="main.html">📚 BookMarket</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">로그아웃</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="mypage-wrap">
+      <h3>마이페이지</h3>
+      <form>
+        <div class="form-group">
+          <label>아이디</label>
+          <input type="text" class="form-control" value="user01" readonly style="background:#f5f5f5;">
+        </div>
+        <div class="form-group">
+          <label>이름</label>
+          <input type="text" class="form-control" value="홍길동">
+        </div>
+        <div class="form-group">
+          <label>이메일</label>
+          <input type="email" class="form-control" value="user01@email.com">
+        </div>
+        <div class="form-group">
+          <label>연락처</label>
+          <input type="text" class="form-control" value="010-1234-5678">
+        </div>
+        <button type="submit" class="btn btn-primary">정보 수정</button>
+      </form>
+
+      <div class="section-btn">
+        <a href="#" class="btn btn-default">비밀번호 변경</a>
+        <a href="#" class="btn btn-danger pull-right">회원 탈퇴</a>
+      </div>
+    </div>
+  </div>
+
+  <footer style="background:#2c3e50;color:#aaa;padding:20px 0;text-align:center;margin-top:20px;">
+    <a href="index.html" style="color:#aaa;">← 프리뷰 목록</a>
+  </footer>
+</body>
+</html>
