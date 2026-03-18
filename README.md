@@ -2,6 +2,8 @@
 
 > 독서 증진 도서 감성 커뮤니티 사이트
 
+**[화면 미리보기](https://ejlee8796.github.io/jsp-spring-bookmarket/)**
+
 <br>
 
 ## 프로젝트 개요
@@ -154,7 +156,7 @@
 아래 파일에서 실제 키 값으로 교체 후 사용하세요.
 
 | 파일 | 키 |
-|------|----|
+|------|---|
 | `NaverLogin.java` | `{NAVER_API_CLIENT_ID}`, `{NAVER_API_SECRET}` |
 | `KakaoLogin.java` | `{KAKAO_API_KEY}` |
 | `Mail.java` | `{MAIL_PASSWORD}` |
