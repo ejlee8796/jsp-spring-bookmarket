@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>BookMarket - 메인</title>
+  <style>
+    .navbar { background:#2c3e50; border:none; border-radius:0; }
+    .navbar-brand, .navbar .nav > li > a { color:#fff !important; }
+    #visual { background:#34495e; padding:60px 0; color:white; text-align:center; }
+    #visual h2 { font-size:2.5em; font-weight:bold; }
+    #visual p { color:#aaa; }
+    .carousel-btn { margin:20px 10px 0; }
+    .tab-section { padding:30px 0; background:#fff; }
+    .book-thumb { text-align:center; margin-bottom:20px; }
+    .book-thumb img { width:100%; max-width:120px; border:1px solid #eee; }
+    .book-thumb h5 { font-size:0.85em; margin-top:8px; }
+    .book-thumb p { font-size:0.8em; color:#888; }
+    .bestseller-section { background:#f9f9f9; padding:30px 0; }
+    .rank-num { font-size:1.5em; font-weight:bold; color:#e74c3c; }
+    .special-section { padding:30px 0; }
+    .thumbnail { border:1px solid #eee; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <span class="navbar-brand">📚 BookMarket</span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">마이페이지</a></li>
+        <li><a href="#">게시판</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 캐러셀 배너 -->
+  <div id="visual">
+    <div class="container">
+      <h2>BookMarket's 이달의 추천</h2>
+      <p>매달 엄선한 도서를 만나보세요</p>
+      <a href="#" class="btn btn-default carousel-btn">◀ 이전</a>
+      <a href="#" class="btn btn-default carousel-btn">다음 ▶</a>
+    </div>
+  </div>
+
+  <!-- 탭 메뉴 -->
+  <div class="tab-section">
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">BookMarket's Choice</a></li>
+        <li><a href="#">스테디 셀러</a></li>
+        <li><a href="#">화제의 만화</a></li>
+        <li><a href="#">eBook 눈에 띄는 책</a></li>
+        <li><a href="#">Book Story</a></li>
+      </ul>
+      <div style="padding:20px 0;">
+        <div class="row">
+          <div class="col-sm-2 book-thumb">
+            <div style="background:#ddd;height:140px;line-height:140px;text-align:center;color:#aaa;">표지</div>
+            <h5>도서명 A</h5><p>저자명</p>
+          </div>
+          <div class="col-sm-2 book-thumb">
+            <div style="background:#ddd;height:140px;line-height:140px;text-align:center;color:#aaa;">표지</div>
+            <h5>도서명 B</h5><p>저자명</p>
+          </div>
+          <div class="col-sm-2 book-thumb">
+            <div style="background:#ddd;height:140px;line-height:140px;text-align:center;color:#aaa;">표지</div>
+            <h5>도서명 C</h5><p>저자명</p>
+          </div>
+          <div class="col-sm-2 book-thumb">
+            <div style="background:#ddd;height:140px;line-height:140px;text-align:center;color:#aaa;">표지</div>
+            <h5>도서명 D</h5><p>저자명</p>
+          </div>
+          <div class="col-sm-2 book-thumb">
+            <div style="background:#ddd;height:140px;line-height:140px;text-align:center;color:#aaa;">표지</div>
+            <h5>도서명 E</h5><p>저자명</p>
+          </div>
+          <div class="col-sm-2 book-thumb">
+            <div style="background:#ddd;height:140px;line-height:140px;text-align:center;color:#aaa;">표지</div>
+            <h5>도서명 F</h5><p>저자명</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 베스트셀러 -->
+  <div class="bestseller-section">
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#"><strong>주간 베스트셀러 |</strong></a></li>
+        <li><a href="#">월간 베스트셀러</a></li>
+      </ul>
+      <div style="padding:20px 0;">
+        <div class="row">
+          <div class="col-sm-3 text-center">
+            <span class="rank-num">1위</span>
+            <div style="background:#ddd;height:180px;margin:10px auto;max-width:130px;line-height:180px;color:#aaa;">표지</div>
+            <h4><strong>베스트셀러 도서명</strong></h4>
+            <p>저자 | 출판사</p>
+          </div>
+          <div class="col-sm-9">
+            <div class="row">
+              <div class="col-sm-2 text-center" style="margin-bottom:15px;">
+                <small><strong>2위</strong></small>
+                <div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div>
+                <p style="font-size:0.8em;margin-top:5px;">도서명 B</p>
+              </div>
+              <div class="col-sm-2 text-center" style="margin-bottom:15px;">
+                <small><strong>3위</strong></small>
+                <div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div>
+                <p style="font-size:0.8em;margin-top:5px;">도서명 C</p>
+              </div>
+              <div class="col-sm-2 text-center" style="margin-bottom:15px;">
+                <small><strong>4위</strong></small>
+                <div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div>
+                <p style="font-size:0.8em;margin-top:5px;">도서명 D</p>
+              </div>
+              <div class="col-sm-2 text-center" style="margin-bottom:15px;">
+                <small><strong>5위</strong></small>
+                <div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div>
+                <p style="font-size:0.8em;margin-top:5px;">도서명 E</p>
+              </div>
+              <div class="col-sm-2 text-center" style="margin-bottom:15px;">
+                <small><strong>6위</strong></small>
+                <div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div>
+                <p style="font-size:0.8em;margin-top:5px;">도서명 F</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 작가 특집 -->
+  <div class="special-section">
+    <div class="container">
+      <h3><strong>#작가_특집</strong></h3>
+      <div class="row">
+        <div class="col-sm-2"><div class="thumbnail" style="text-align:center;padding:10px;"><div style="background:#ddd;height:100px;line-height:100px;color:#aaa;">표지</div><p>작가 A</p></div></div>
+        <div class="col-sm-2"><div class="thumbnail" style="text-align:center;padding:10px;"><div style="background:#ddd;height:100px;line-height:100px;color:#aaa;">표지</div><p>작가 B</p></div></div>
+        <div class="col-sm-2"><div class="thumbnail" style="text-align:center;padding:10px;"><div style="background:#ddd;height:100px;line-height:100px;color:#aaa;">표지</div><p>작가 C</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <footer style="background:#2c3e50;color:#aaa;padding:20px 0;text-align:center;margin-top:20px;">
+    <p>BookMarket &copy; 2020</p>
+    <a href="index.html" style="color:#aaa;">← 프리뷰 목록</a>
+  </footer>
+</body>
+</html>
