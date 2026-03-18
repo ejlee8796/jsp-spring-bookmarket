@@ -4,39 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="css/default.css">
   <title>BookMarket - 메인</title>
   <style>
-    .navbar { background:#2c3e50; border:none; border-radius:0; }
-    .navbar-brand, .navbar .nav > li > a { color:#fff !important; }
-    #visual { background:#34495e; padding:60px 0; color:white; text-align:center; }
-    #visual h2 { font-size:2.5em; font-weight:bold; }
-    #visual p { color:#aaa; }
-    .carousel-btn { margin:20px 10px 0; }
-    .tab-section { padding:30px 0; background:#fff; }
-    .book-thumb { text-align:center; margin-bottom:20px; }
-    .book-thumb img { width:100%; max-width:120px; border:1px solid #eee; }
-    .book-thumb h5 { font-size:0.85em; margin-top:8px; }
-    .book-thumb p { font-size:0.8em; color:#888; }
-    .bestseller-section { background:#f9f9f9; padding:30px 0; }
-    .rank-num { font-size:1.5em; font-weight:bold; color:#e74c3c; }
-    .special-section { padding:30px 0; }
-    .thumbnail { border:1px solid #eee; }
+    body { font-family: 'Lato', sans-serif; color: #333; }
+    .cheader.he1 { background: #f5f5f5; border-bottom: 1px solid #ddd; padding: 4px 0; font-size: 0.85em; }
+    .cheader.he2 { padding: 14px 0; border-bottom: 1px solid #eee; }
+    .cheader.he3 { border-top: 1px solid #ddd; border-bottom: 2px solid #333; padding: 5px 0; font-size: 15px; font-weight: bold; }
+    .cheader.he3 a { color: #333; margin-right: 20px; }
+    #logoimg { width: 130px; }
+    input#search { padding: 5px; width: 60%; border: 1px solid #ccc; border-radius: 6px; }
+    #visual { background: #34495e; padding: 60px 0; color: white; text-align: center; }
+    #visual h2 { font-size: 2.5em; font-weight: bold; }
+    #visual p { color: #aaa; }
+    .carousel-btn { margin: 20px 10px 0; }
+    .tab-section { padding: 30px 0; background: #fff; }
+    .book-thumb { text-align: center; margin-bottom: 20px; }
+    .book-cover-placeholder { background: #ddd; height: 140px; line-height: 140px; text-align: center; color: #aaa; }
+    .book-thumb h5 { font-size: 0.85em; margin-top: 8px; }
+    .book-thumb p { font-size: 0.8em; color: #888; }
+    .bestseller-section { background: #f9f9f9; padding: 30px 0; }
+    .rank-num { font-size: 1.5em; font-weight: bold; color: #e74c3c; }
+    .special-section { padding: 30px 0; }
+    .thumbnail { border: 1px solid #eee; }
+    .nav-right-top { text-align: right; padding: 4px 0; }
+    .nav-right-top a { margin-left: 12px; color: #555; font-size: 0.9em; }
   </style>
 </head>
 <body>
-  <nav class="navbar">
+
+  <!-- he1: 상단 유틸 메뉴 -->
+  <div class="cheader he1">
     <div class="container">
-      <div class="navbar-header">
-        <span class="navbar-brand">📚 BookMarket</span>
+      <div class="nav-right-top">
+        <a href="login.html">로그인</a>
+        <a href="#">회원가입</a>
+        <a href="mypage.html">마이페이지</a>
+        <a href="#">고객센터</a>
       </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">로그인</a></li>
-        <li><a href="#">회원가입</a></li>
-        <li><a href="#">마이페이지</a></li>
-        <li><a href="#">게시판</a></li>
-      </ul>
     </div>
-  </nav>
+  </div>
+
+  <!-- he2: 로고 + 검색 -->
+  <div class="cheader he2">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <a href="#"><span style="font-size:1.8em; font-weight:bold; color:#2c3e50;">📚 BookMarket</span></a>
+        </div>
+        <div class="col-sm-9">
+          <input type="search" id="search" placeholder="검색어를 입력하세요.">
+          <input type="button" value="검색" class="btn btn-default" style="margin-left:6px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- he3: 카테고리 메뉴 -->
+  <div class="cheader he3">
+    <div class="container">
+      <a href="#">국내/외국 도서 ▾</a>
+      <a href="#">출석체크</a>
+      <a href="#">eBook Gallery</a>
+      <a href="#">이벤트</a>
+      <a href="#">중고거래</a>
+      <a href="#">포트폴리오</a>
+    </div>
+  </div>
 
   <!-- 캐러셀 배너 -->
   <div id="visual">
@@ -60,30 +96,12 @@
       </ul>
       <div style="padding:20px 0;">
         <div class="row">
-          <div class="col-sm-2 book-thumb">
-            <div style="background:#ddd;height:140px;line-height:140px;text-align:center;color:#aaa;">표지</div>
-            <h5>도서명 A</h5><p>저자명</p>
-          </div>
-          <div class="col-sm-2 book-thumb">
-            <div style="background:#ddd;height:140px;line-height:140px;text-align:center;color:#aaa;">표지</div>
-            <h5>도서명 B</h5><p>저자명</p>
-          </div>
-          <div class="col-sm-2 book-thumb">
-            <div style="background:#ddd;height:140px;line-height:140px;text-align:center;color:#aaa;">표지</div>
-            <h5>도서명 C</h5><p>저자명</p>
-          </div>
-          <div class="col-sm-2 book-thumb">
-            <div style="background:#ddd;height:140px;line-height:140px;text-align:center;color:#aaa;">표지</div>
-            <h5>도서명 D</h5><p>저자명</p>
-          </div>
-          <div class="col-sm-2 book-thumb">
-            <div style="background:#ddd;height:140px;line-height:140px;text-align:center;color:#aaa;">표지</div>
-            <h5>도서명 E</h5><p>저자명</p>
-          </div>
-          <div class="col-sm-2 book-thumb">
-            <div style="background:#ddd;height:140px;line-height:140px;text-align:center;color:#aaa;">표지</div>
-            <h5>도서명 F</h5><p>저자명</p>
-          </div>
+          <div class="col-sm-2 book-thumb"><div class="book-cover-placeholder">표지</div><h5>도서명 A</h5><p>저자명</p></div>
+          <div class="col-sm-2 book-thumb"><div class="book-cover-placeholder">표지</div><h5>도서명 B</h5><p>저자명</p></div>
+          <div class="col-sm-2 book-thumb"><div class="book-cover-placeholder">표지</div><h5>도서명 C</h5><p>저자명</p></div>
+          <div class="col-sm-2 book-thumb"><div class="book-cover-placeholder">표지</div><h5>도서명 D</h5><p>저자명</p></div>
+          <div class="col-sm-2 book-thumb"><div class="book-cover-placeholder">표지</div><h5>도서명 E</h5><p>저자명</p></div>
+          <div class="col-sm-2 book-thumb"><div class="book-cover-placeholder">표지</div><h5>도서명 F</h5><p>저자명</p></div>
         </div>
       </div>
     </div>
@@ -93,7 +111,7 @@
   <div class="bestseller-section">
     <div class="container">
       <ul class="nav nav-tabs">
-        <li class="active"><a href="#"><strong>주간 베스트셀러 |</strong></a></li>
+        <li class="active"><a href="#"><strong>주간 베스트셀러</strong></a></li>
         <li><a href="#">월간 베스트셀러</a></li>
       </ul>
       <div style="padding:20px 0;">
@@ -106,31 +124,11 @@
           </div>
           <div class="col-sm-9">
             <div class="row">
-              <div class="col-sm-2 text-center" style="margin-bottom:15px;">
-                <small><strong>2위</strong></small>
-                <div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div>
-                <p style="font-size:0.8em;margin-top:5px;">도서명 B</p>
-              </div>
-              <div class="col-sm-2 text-center" style="margin-bottom:15px;">
-                <small><strong>3위</strong></small>
-                <div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div>
-                <p style="font-size:0.8em;margin-top:5px;">도서명 C</p>
-              </div>
-              <div class="col-sm-2 text-center" style="margin-bottom:15px;">
-                <small><strong>4위</strong></small>
-                <div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div>
-                <p style="font-size:0.8em;margin-top:5px;">도서명 D</p>
-              </div>
-              <div class="col-sm-2 text-center" style="margin-bottom:15px;">
-                <small><strong>5위</strong></small>
-                <div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div>
-                <p style="font-size:0.8em;margin-top:5px;">도서명 E</p>
-              </div>
-              <div class="col-sm-2 text-center" style="margin-bottom:15px;">
-                <small><strong>6위</strong></small>
-                <div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div>
-                <p style="font-size:0.8em;margin-top:5px;">도서명 F</p>
-              </div>
+              <div class="col-sm-2 text-center" style="margin-bottom:15px;"><small><strong>2위</strong></small><div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div><p style="font-size:0.8em;margin-top:5px;">도서명 B</p></div>
+              <div class="col-sm-2 text-center" style="margin-bottom:15px;"><small><strong>3위</strong></small><div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div><p style="font-size:0.8em;margin-top:5px;">도서명 C</p></div>
+              <div class="col-sm-2 text-center" style="margin-bottom:15px;"><small><strong>4위</strong></small><div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div><p style="font-size:0.8em;margin-top:5px;">도서명 D</p></div>
+              <div class="col-sm-2 text-center" style="margin-bottom:15px;"><small><strong>5위</strong></small><div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div><p style="font-size:0.8em;margin-top:5px;">도서명 E</p></div>
+              <div class="col-sm-2 text-center" style="margin-bottom:15px;"><small><strong>6위</strong></small><div style="background:#ddd;height:100px;line-height:100px;color:#aaa;font-size:0.8em;">표지</div><p style="font-size:0.8em;margin-top:5px;">도서명 F</p></div>
             </div>
           </div>
         </div>
