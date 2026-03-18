@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>BookMarket - Preview</title>
+  <style>
+    body { background: #f8f8f8; }
+    .hero { background: #2c3e50; color: white; padding: 60px 0 40px; text-align: center; }
+    .hero h1 { font-size: 2.5em; font-weight: bold; }
+    .hero p { font-size: 1.2em; color: #aaa; margin-top: 10px; }
+    .card-grid { padding: 40px 0; }
+    .preview-card { background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 30px; margin-bottom: 24px; text-align: center; transition: box-shadow 0.2s; }
+    .preview-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+    .preview-card .icon { font-size: 2.5em; margin-bottom: 12px; }
+    .preview-card h4 { font-weight: bold; margin-bottom: 8px; }
+    .preview-card p { color: #888; font-size: 0.9em; margin-bottom: 16px; }
+    .badge-tag { display: inline-block; background: #eee; border-radius: 4px; padding: 2px 8px; font-size: 0.8em; margin: 2px; }
+    .section-title { text-align: center; margin: 40px 0 20px; font-weight: bold; font-size: 1.3em; color: #555; }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>📚 BookMarket</h1>
+    <p>JSP/Servlet + Spring MVC 기반 온라인 서점 웹 프로젝트</p>
+    <p>
+      <span class="badge-tag">Java</span>
+      <span class="badge-tag">JSP/Servlet</span>
+      <span class="badge-tag">Spring MVC</span>
+      <span class="badge-tag">MyBatis</span>
+      <span class="badge-tag">MySQL</span>
+      <span class="badge-tag">Bootstrap 3</span>
+    </p>
+  </div>
+
+  <div class="container card-grid">
+    <div class="section-title">페이지 미리보기</div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="preview-card">
+          <div class="icon">🏠</div>
+          <h4>메인 페이지</h4>
+          <p>캐러셀 배너, 탭메뉴(BookMarket's Choice · 스테디셀러 · 화제의만화 · eBook), 베스트셀러, 작가특집</p>
+          <a href="main.html" class="btn btn-primary btn-sm">미리보기</a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="preview-card">
+          <div class="icon">📊</div>
+          <h4>베스트셀러</h4>
+          <p>알라딘 RSS API 연동 주간/월간 베스트셀러 목록</p>
+          <a href="bestSeller.html" class="btn btn-primary btn-sm">미리보기</a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="preview-card">
+          <div class="icon">🔐</div>
+          <h4>로그인 / 회원가입</h4>
+          <p>일반 로그인 + 카카오 · 네이버 · 구글 소셜 로그인, 이메일 인증</p>
+          <a href="login.html" class="btn btn-primary btn-sm">미리보기</a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="preview-card">
+          <div class="icon">📋</div>
+          <h4>게시판</h4>
+          <p>목록 · 상세 · 작성 · 수정 · 삭제 · 댓글 · 페이징 구현</p>
+          <a href="bookList.html" class="btn btn-primary btn-sm">미리보기</a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="preview-card">
+          <div class="icon">👤</div>
+          <h4>마이페이지</h4>
+          <p>회원정보 수정, 비밀번호 변경, 회원 탈퇴</p>
+          <a href="mypage.html" class="btn btn-primary btn-sm">미리보기</a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="preview-card">
+          <div class="icon">🗄</div>
+          <h4>ERD</h4>
+          <p>DB 테이블 설계</p>
+          <a href="erd.png" class="btn btn-default btn-sm" target="_blank">보기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
